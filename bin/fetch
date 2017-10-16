@@ -20,4 +20,7 @@ $app->add($command);
 $command = new \Datanyze\fetcher\commands\UniversitiesUsaCommand();
 $app->add($command);
 
+$command = new \Datanyze\fetcher\commands\DreamforceSponsorsCommand();
+$app->add($command);
+
 $app->run();
