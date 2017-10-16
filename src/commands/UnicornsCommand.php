@@ -60,12 +60,18 @@ class UnicornsCommand extends Command {
 		foreach ($list as $id => $item) {
 			$companyUrl = $item['link'];
 			try {
+				$client = new Client();
+				$result = $client->get('https://www.crunchbase.com/organization/uber#/entity');
+				var_dump($result); exit;
+
+
 				$companySite = Ar::get((new Xget(new Client()))
 					->setUrl($companyUrl)
 					->parse([ 'url' => '//dl/dt[contains(., "Website")]/following-sibling::dd[1]/a/.' ]), 'url.0');
 			} catch(\Exception $e) {
 				echo $e->getMessage(); exit;
 			}
+			var_dump($companySite); exit;
 			if (null === $companySite) {
 				$noSite++;
 			} else {

@@ -4,7 +4,6 @@ namespace Datanyze\fetcher\commands;
 
 
 use Datanyze\fetcher\helpers\CsvFormatter;
-use eznio\ar\Ar;
 use eznio\styler\references\ForegroundColors;
 use eznio\styler\Styler;
 use eznio\xget\Xget;
@@ -16,8 +15,6 @@ use Symfony\Component\Console\Output\OutputInterface;
 
 class DreamforceSponsorsCommand extends Command
 {
-	protected $url = '';
-
 	public function configure() {
 		$this->setName('dreamforce_sponsors')
 			 ->setAliases(['ds'])
