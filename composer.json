@@ -1,0 +1,13 @@
+{
+    "autoload": {
+        "psr-4": {
+            "Datanyze\\fetcher\\": "src"
+        }
+    },
+    "require": {
+        "eznio/xget": "v1.0.4.1",
+        "symfony/console": "^3.3",
+        "eznio/styler": "^1.1",
+        "guzzlehttp/guzzle": "^6.3"
+    }
+}
